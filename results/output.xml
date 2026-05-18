@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.7 on win32)" generated="2026-05-18T10:20:20.539516" rpa="false" schemaversion="5">
+<suite id="s1" name="TUDONGHOAQUYTRINH" source="D:\DU LIEU\TUDONGHOAQUYTRINH">
+<suite id="s1-s1" name="TuDongHoaQuyTrinh" source="D:\DU LIEU\TUDONGHOAQUYTRINH\TuDongHoaQuyTrinh">
+<suite id="s1-s1-s1" name="Test" source="D:\DU LIEU\TUDONGHOAQUYTRINH\TuDongHoaQuyTrinh\test.robot">
+<test id="s1-s1-s1-t1" name="Login Successfully" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:20.884349" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-18T10:20:20.883666" elapsed="7.765735"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-18T10:20:28.649947" elapsed="0.030595"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:28.697552" level="INFO">Page title is 'The Internet'.</msg>
+<arg>The Internet</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-05-18T10:20:28.681726" elapsed="0.016992"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:28.703651" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-18T10:20:28.700682" elapsed="0.186702"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:28.888604" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-18T10:20:28.887968" elapsed="0.158360"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:29.047703" level="INFO">Clicking button 'css=button.radius'.</msg>
+<arg>css=button.radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-18T10:20:29.047016" elapsed="0.139496"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:29.800122" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-05-18T10:20:29.187056" elapsed="0.613646"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-18T10:20:32.806537" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-18T10:20:29.803017" elapsed="3.005000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-18T10:20:32.809334" elapsed="2.233266"/>
+</kw>
+<status status="PASS" start="2026-05-18T10:20:20.872648" elapsed="14.170794"/>
+</test>
+<test id="s1-s1-s1-t2" name="Login Failed" line="36">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:35.054635" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-18T10:20:35.054116" elapsed="6.497575"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-18T10:20:41.552595" elapsed="0.034208"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:41.600723" level="INFO">Page title is 'The Internet'.</msg>
+<arg>The Internet</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-05-18T10:20:41.587647" elapsed="0.013734"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:41.604147" level="INFO">Typing text 'abcxyz' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${INVALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-18T10:20:41.602638" elapsed="0.181853"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:41.786466" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-18T10:20:41.785554" elapsed="0.131705"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:41.918716" level="INFO">Clicking button 'css=button.radius'.</msg>
+<arg>css=button.radius</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-18T10:20:41.918013" elapsed="0.762205"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-05-18T10:20:42.701561" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-05-18T10:20:42.680817" elapsed="0.021421"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-05-18T10:20:45.705735" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-05-18T10:20:42.703708" elapsed="3.003236"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-18T10:20:45.707485" elapsed="2.178462"/>
+</kw>
+<status status="PASS" start="2026-05-18T10:20:35.049775" elapsed="12.836987"/>
+</test>
+<status status="PASS" start="2026-05-18T10:20:20.603303" elapsed="27.291521"/>
+</suite>
+<status status="PASS" start="2026-05-18T10:20:20.599242" elapsed="27.302372"/>
+</suite>
+<status status="PASS" start="2026-05-18T10:20:20.546928" elapsed="27.361604"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TUDONGHOAQUYTRINH" id="s1" pass="2" fail="0" skip="0">TUDONGHOAQUYTRINH</stat>
+<stat name="TuDongHoaQuyTrinh" id="s1-s1" pass="2" fail="0" skip="0">TUDONGHOAQUYTRINH.TuDongHoaQuyTrinh</stat>
+<stat name="Test" id="s1-s1-s1" pass="2" fail="0" skip="0">TUDONGHOAQUYTRINH.TuDongHoaQuyTrinh.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
